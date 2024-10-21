@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PiedpiperConfig(AppConfig):
+class KinohdConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'PiedPiper'
+    name = 'KinoHD'

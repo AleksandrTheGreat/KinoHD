@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="FonZagolovok">
+            <div class="Zagolovok">
+                <h1>Main Page is here</h1>
+            </div>
+        </div>    
+    </header>
+
+    <main>
+        <div class="FonMain">
+            <div class="carts">
+                {% for i in carts %}
+                <div class="cart">
+                    <div>
+                        <div>{{ i.title }}</div>
+                    </div>
+                    <div>
+                        <img src="{% static {{ i.image }} %}">
+                    </div>
+                    <div>
+                        <div>{{ i.description }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
